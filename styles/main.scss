@@ -1,0 +1,158 @@
+//Poner los archivos en orden segun dependencia
+//Poner los archivos en orden segun dependencia
+@import 'variables';
+@import 'reset';
+@import 'globals';
+
+/*Atoms*/
+@import './Atoms/division';
+@import './Atoms/button';
+@import './Atoms/logo';
+@import './Atoms/input';
+@import './Atoms/listas';
+@import './Atoms/links';
+@import './Atoms/text';
+
+/*Molecules*/
+@import './Molecules/banner-text';
+@import './Molecules/search';
+@import './Molecules/article-footer';
+@import './Molecules/all-article-nav';
+
+/*Organisms*/
+@import './Organisms/header';
+@import './Organisms/main';
+@import './Organisms/banner';
+@import './Organisms/cards';
+@import './Organisms/sections';
+@import './Organisms/footer';
+
+
+/*MAIN*/
+.banner{
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+    div{
+        /*position*/
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+        /*Utilizo text align para centrar el contenido horizontal*/
+        text-align: center;
+        /*Utilizo flex para centrar el contenido vertical*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*font*/
+        color: $light-100;
+
+        h1{
+            font-size: $font-size-1 * 3;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        p{
+            font-size: $font-size-2;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: $light-100;
+            opacity: 0.8;
+        }
+    }
+}
+
+/*Container*/
+
+.container{
+    max-width: $width-container;
+    margin: auto;
+    margin-top: 56px;
+
+    .search{
+        display: flex;
+        height: 56px;
+        align-items: center;
+        background-color: $light-200;
+        border-radius: 10px; 
+
+        button{
+            padding: 0px 27px;
+        
+        }
+
+        input{
+            flex-grow: 1;
+            height: 100%;
+            border: none;
+            background: transparent;
+            font-size: 1.2em;
+            opacity: 0.6;
+            outline: none;
+        }
+    }
+
+    .popular{
+        
+        //Afuera porque se repite   
+        .container-articulos{
+            display: flex;
+            justify-content: space-between;       
+        }
+        .referencia-final{
+            display: block;
+            color: $blue-300;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 54px;
+            margin-bottom: 26px;
+        }
+        
+    }
+    
+    .all-article{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: $blue-200;
+    border-radius: 0px 200px 0px 0px;
+    
+    .footer-bloque-1{
+        display: flex;
+        max-width: $width-container;
+        margin: auto;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        align-items: center;
+        
+        .footer-texto{
+            width: 50%;
+
+            h5{
+                margin-bottom: 35px;
+            }
+        }
+        .footer-button{
+            width: 50%;
+            text-align: right;
+        }
+    }
+
+    .footer-bloque-2{
+        display: flex;
+        max-width: $width-container;
+        margin: auto;
+        padding-top: 90px;
+        padding-bottom: 35px;  
+    }
+}

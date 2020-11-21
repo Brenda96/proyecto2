@@ -1,0 +1,12 @@
+.popular{
+    //Afuera porque se repite   
+    .container-articulos{
+        display: flex;
+        justify-content: space-between;       
+    } 
+}
+
+.all-article{
+    display: flex;
+    flex-direction: column;
+}
